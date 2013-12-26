@@ -88,3 +88,23 @@ function updateImages()
 		
 		createGUI();
 	};
+	this.hide = function( index, frm )
+	{
+		
+		
+		// frm.img = self.arImages[index].img;
+		
+		$(frm).hide();
+		
+		frm.removeChild(frm.img);
+		frm.appendChild(self.arImages[index].img);
+		frm.img = self.arImages[index].img;
+		updateGUI(frm, self.arImages[index].title, self.arImages[index].desc);
+		
+		
+		
+		// $(self.arImages[index].imgFrm).css("z-index", 0);
+		// $(self.arImages[index].imgFrm).hide();
+		
+		console.log("hide: index: " + index);
+	};
