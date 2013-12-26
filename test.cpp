@@ -80,3 +80,9 @@ function updateImages()
 		
 		document.getElementsByTagName("head")[0].appendChild(oStyleSheet);
 	};
+	
+	function updateGUI( frm, sTitle, sDesc )
+	{
+		frm.desc.updateTitle(sTitle);
+		frm.desc.updateDesc(sDesc);
+	};
