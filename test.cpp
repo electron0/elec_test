@@ -51,3 +51,19 @@ function updateImages()
 		
 		
 	};
+	
+	function createGUI()
+	{
+		try
+		{
+			if(!document.getElementById("galleryStyle"))
+			{
+				addStyles();
+			}
+		}
+		catch (e)
+		{
+			console.log("head not found");
+		}
+
+	};
