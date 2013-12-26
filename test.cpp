@@ -67,3 +67,16 @@ function updateImages()
 		}
 
 	};
+	
+	function addStyles()
+	{
+		var oStyleSheet = document.createElement("style");
+		oStyleSheet.setAttribute("id", "galleryStyle");
+		// TODO: type auf css setzten
+		// oStyleSheet.innerHTML += ".gallery {background: none repeat scroll 0 0 #333333;height: 200px;width: 300px;}";
+		
+		oStyleSheet.innerHTML += ".gallery {height: " + iHeight + "px; width: " + iWidth + "px;}";
+		// oStyleSheet.innerHTML += ".gallery .picdesc {width: " + (iWidth-30) + "px;}";
+		
+		document.getElementsByTagName("head")[0].appendChild(oStyleSheet);
+	};
