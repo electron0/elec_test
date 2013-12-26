@@ -27,3 +27,27 @@ function updateImages()
 			
 		
 	};
+	
+	this.toggleAni = function()
+	{
+		if( bAni )
+		{
+			// stop
+			
+			bAni = false;
+		}
+		else
+		{
+			//start
+			updateGUI( oImgFrameA, this.arImages[iImgIndex].title, this.arImages[iImgIndex].desc );
+			
+			// this.showImage(iImgIndex++, oImgFrameA);
+			updateImages();
+			
+			trIntervalTimer = setInterval(updateImages, iInterval);
+			bAni = true;
+		}
+		
+		
+		
+	};
