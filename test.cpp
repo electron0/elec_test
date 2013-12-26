@@ -67,3 +67,24 @@ function updateImages()
 		}
 
 	};
+
+	this.init = function(oProps)
+	{
+		// TODO: alle props auf vorhandensein checken
+		iWidth = oProps.width;
+		iHeight = oProps.height;
+		bAspectRadio = oProps.aspectRadio;
+		iInterval = oProps.slideInterval;
+		
+		if(!$)
+			alert("jQuery not found");
+		
+		oImgFrameA = new ImgContainer();
+		oImgFrameB = new ImgContainer();
+		
+		oGalleryObj.appendChild(oImgFrameA);
+		oGalleryObj.appendChild(oImgFrameB);
+		
+		
+		createGUI();
+	};
